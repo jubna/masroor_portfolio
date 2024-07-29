@@ -341,7 +341,8 @@ https://templatemo.com/tm-518-sentra
                     <div class="slider-main popup-bg-red">
                         <div class="slider-content-mob">
                             <h3 class="slider-head">Dark Energy Theories</h3>
-                            <p  class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem
                                 Ipsum
                                 has been the
                                 industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -352,24 +353,27 @@ https://templatemo.com/tm-518-sentra
                     <div class="slider-main popup-bg-blue">
                         <div class="slider-content-mob">
                             <h3 class="slider-head">Testing Gravity</h3>
-                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum
                                 has been the
                                 industry's standard dummy text ever since the 1500s, when an unknown printer took a
                                 galley of type
                                 and scrambled it to make a type specimen book.</p>
-                                <h3 class="slider-head">Testing Gravity</h3>
-                                <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                    has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type
-                                    and scrambled it to make a type specimen book.</p>
-                                
+                            <h3 class="slider-head">Testing Gravity</h3>
+                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley of type
+                                and scrambled it to make a type specimen book.</p>
+
                         </div>
                     </div>
                     <div class="slider-main popup-bg-green">
                         <div class="slider-content-mob">
                             <h3 class="slider-head">Cosmological Tension</h3>
-                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            <p class="slider-para">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum
                                 has been the
                                 industry's standard dummy text ever since the 1500s, when an unknown printer took a
                                 galley of type
@@ -765,25 +769,42 @@ https://templatemo.com/tm-518-sentra
                     </p>
 
                 </div>
-            </div>
 
-            <div id="map">
+                
+    <div class="form_and_address">
+        <div id="map">
 
-                <!-- How to change your own map point
-                           1. Go to Google Maps
-                           2. Click on your location point
-                           3. Click "Share" and choose "Embed map" tab
-                           4. Copy only URL and paste it within the src="" field below
-                    -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7686.5647817735935!2d100.154906!3d15.576554000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e04589839318e9%3A0xf04fb558f3130d0!2sMahidol%20University%2C%20Nakhon%20Sawan%20Campus!5e0!3m2!1sen!2sth!4v1692682279684!5m2!1sen!2sth"
-                    width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+            <!-- How to change your own map point
+                       1. Go to Google Maps
+                       2. Click on your location point
+                       3. Click "Share" and choose "Embed map" tab
+                       4. Copy only URL and paste it within the src="" field below
+                -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7686.5647817735935!2d100.154906!3d15.576554000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e04589839318e9%3A0xf04fb558f3130d0!2sMahidol%20University%2C%20Nakhon%20Sawan%20Campus!5e0!3m2!1sen!2sth!4v1692682279684!5m2!1sen!2sth"
+                width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+   
+    <div class="form">
+        <form action="" method="POST" id="contact-form">
+          <h3>Say Hello</h3>
+           
+            <input type="email" id="email" name="email" required placeholder="Email">
+            <br>
+            
+            <textarea id="message" name="message" required placeholder="Message"></textarea>
+            <br>
+            <button type="submit">Send</button>
+        </form>
+        <div id="toast" class="toast">Form submitted successfully!</div>
+    </div>
+</div>
+    </section>
 
-        </section>
-        <section class="footer">
-            <p></p>
-        </section>
+
+    <section class="footer">
+        <p></p>
+    </section>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -882,6 +903,39 @@ https://templatemo.com/tm-518-sentra
 
     </script>
 
+<script>
+    document.getElementById('contact-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = new FormData(form);
+        const action = form.action;
+
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                showToast();
+            } else {
+                alert('There was an error submitting the form');
+            }
+        } catch (error) {
+            alert('There was an error submitting the form');
+        }
+    });
+
+    function showToast() {
+        const toast = document.getElementById('toast');
+        toast.className = 'toast show';
+        setTimeout(function() { toast.className = toast.className.replace('show', ''); }, 3000);
+    }
+</script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
 
