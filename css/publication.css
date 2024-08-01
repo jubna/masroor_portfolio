@@ -63,4 +63,7 @@ color: #000;
     .publication_list{
         padding: 20px;
     }
+    .publication_title,  .publication_author{
+      margin-bottom: 2px;
+    }
 }
