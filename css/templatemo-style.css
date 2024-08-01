@@ -196,7 +196,7 @@ header {
 .sidebar-navigation .logo {
   /* position: absolute; */
   width: 100%;
-  height: 140px;
+  height: auto;
   line-height: 100px;
   background-color: #45489a;
   padding: 20px;
@@ -214,7 +214,7 @@ header {
   height: 100px;
   width: 100%;
   display: inline-block;
-  border: 1px solid rgba(250, 250, 250, 0.5);
+  /* border: 1px solid rgba(250, 250, 250, 0.5); */
 }
 
 .sidebar-navigation .logo em {
@@ -389,7 +389,9 @@ nav .active-section span {
   opacity: 0.5;
   max-width: 100%;
   overflow: auto;
-  padding: 10px;
+  padding: 15px;
+  text-align: justify;
+  max-width: 700px;
 }
 
 .Modern-Slider .info .white-button {
@@ -839,16 +841,25 @@ nav .active-section span {
   transition: all .6s .8s;
 }
 
-
-
-
+/* Publications */
+#publication{
+    width: 90%;
+    margin: 40px auto 0;
+    position: relative;
+}
+#publication iframe{
+  border: none;
+}
 /* Blog Style */
 
 #blog {
-  padding-left: 60px;
+  /* padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
-  margin-top: 40px;
+  margin-top: 40px; */
+  width: 90%;
+  margin: 20px auto 80px;
+  position: relative;
 }
 
 #blog .tabs {
@@ -1187,14 +1198,14 @@ nav .active-section span {
   }
 
 }
-@media (max-width: 1210px) {
+@media (max-width: 1200px) {
 .sidebar-navigation .logo a {
   font-size: 12px;
 }
 }
 @media (max-width: 992px) {
   .sidebar-navigation .logo a {
-    font-size: 8px;
+    font-size: 10px;
   }
   .sidebar-navigation nav a {
     font-size: 13px;
@@ -1223,7 +1234,11 @@ nav .active-section span {
   }
 }
 
-
+@media (max-width: 834px) {
+  .sidebar-navigation .logo a {
+    font-size: 8px;
+  }
+}
 @media (max-width: 767px) {
 
   .responsive-nav {
@@ -1345,7 +1360,17 @@ nav .active-section span {
 }
 
 @media (max-width: 350px) {
+
   #blog .tabs li{
     width: 100%;
   }
 }
+
+@media (max-width: 280px) {
+
+  .Modern-Slider .info p {
+font-size: 11px;
+padding: 5px;
+  }
+}
+
