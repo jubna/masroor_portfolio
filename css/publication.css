@@ -28,7 +28,6 @@
     top: 5px;
     left: 0px;
     border: 1px solid #000;
-    background-color: #45489a;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -36,7 +35,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    color: #ffffff;
+    color: black;
     content: counter(custom-counter) " "; /* Styles numbering as numbers */
   }
   .reverse-list {

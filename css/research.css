@@ -63,31 +63,60 @@ section#research article  div.circles{
   position: absolute;
   top: 50px;
   left: 50px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .red {
-  background-color: rgba(255, 0, 0);
+  background-color: rgb(255, 0, 0);
   opacity: .5;
   z-index: 1;
+  transition: .2s ease-in;
 }
-
+.red:hover{
+  background-color: rgb(255, 0, 0);
+  opacity: 1;
+  z-index: 4;
+}
+.research1 p,.research2 p,.research3 p{
+  display: none;
+}
+.red:hover .research1 p,
+.blue:hover .research2 p,
+.green:hover .research3 p{
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 6000;
+}
 .blue {
-  background-color: rgb(0, 0, 255,.5);
+  background-color: rgba(0, 0, 255,.5);
   opacity: .5;
   z-index: 2;
   top: 50px;
   left: 260px;
+  transition: .2s ease-in;
+}
+.blue:hover{
+  background-color: rgb(0, 0, 255);
+  opacity: 1;
+  z-index: 4;
 }
 
+
 .green {
-  background-color: rgba(135, 200, 135, 0.8);
-  opacity: 0.8;
+  background-color: rgba(135, 200, 135, 0.6);
+  opacity: 0.7;
   z-index: 3;
   top: 250px;
   left: 150px;
+  transition: .2s ease-in;
 }
-
+.green:hover{
+  background-color: rgba(135, 200, 135);
+  opacity: 1;
+  
+}
 .mobile-circle-section{
   display: none;
   width:90%;
