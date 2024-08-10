@@ -87,6 +87,7 @@ section#research article  div.circles{
   color: white;
   font-size: 16px;
   font-weight: 6000;
+text-align: center;
 }
 .blue {
   background-color: rgba(0, 0, 255,.5);
@@ -147,6 +148,10 @@ max-height: 700px;
   }
   .mobile-circle-section{
     display: block;
+  }
+  section#research{
+    height: auto;
+    margin-bottom: 0;
   }
 }
 
